@@ -28,3 +28,9 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
     model = DishType
     paginate_by = 5
     context_object_name = "dish_type_list"
+
+
+class DishListView(LoginRequiredMixin, generic.ListView):
+    model = Dish
+    paginate_by = 5
+

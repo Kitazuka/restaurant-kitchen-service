@@ -2,7 +2,7 @@
 <div class="row py-7 mt-2 text-md-center">
   <div class="navbar-brand font-weight-bolder">
     <a href="{% url 'kitchen:index' %}" class="btn custom_button bg-gradient bg-opacity-25 rounded-pill float-start home_button">Home</a>
-    <a href="" class="btn custom_button bg-gradient bg-opacity-25 rounded-pill">All dishes</a>
+    <a href="{% url 'kitchen:dishes-list' %}" class="btn custom_button bg-gradient bg-opacity-50 rounded-pill">All dishes</a>
     <a href="{% url 'kitchen:dish-type-list' %}" class="btn custom_button bg-gradient bg-opacity-25 rounded-pill">All dish types</a>
     <a href="#" class="btn custom_button bg-gradient bg-opacity-25 rounded-pill">All cooks</a>
     {% if user.is_authenticated %}

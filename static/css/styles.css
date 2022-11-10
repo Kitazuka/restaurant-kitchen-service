@@ -18,7 +18,7 @@ body{
 }
 
 .custom_button {
-    background-color: lightslategray;
+    background-color: lightgray;
     height: 50px;
     width: 150px;
     margin-top: 10px;
@@ -29,7 +29,7 @@ body{
 
 
 .update_button {
-    background-color: #D3BC69;
+    background-color: #E9E9CF;
     height: 35px;
     width: 100px;
     border: black solid 2px;
@@ -39,7 +39,7 @@ body{
 }
 
 .delete_button {
-    background-color: #E5255E;
+    background-color: #E9CFD4;
     height: 35px;
     width: 100px;
     border: black solid 2px;
@@ -50,7 +50,7 @@ body{
 
 
 .create_button {
-    background-color: #3C9B54;
+    background-color: #CFE9D7;
     height: 35px;
     width: 100px;
     border: black solid 2px;

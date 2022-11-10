@@ -1,22 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Our dish types:</h1>
-  {% if dish_type_list %}
+  <h1>Our dishes:</h1>
+  {% if dish_list %}
       <table class="table">
       <thead>
         <tr>
           <th scope="col">id</th>
           <th scope="col">name</th>
+          <th scope="col">description</th>
+          <th scope="col">price</th>
+          <th scope="col">dish_type</th>
           <th scope="col">Update</th>
           <th scope="col">Delete</th>
         </tr>
       </thead>
-        {% for dish_type in dish_type_list %}
+        {% for dish in dish_list %}
       <tbody>
         <tr>
-          <th scope="row">{{ dish_type.id }}</th>
-          <td>{{ dish_type.name }}</td>
+          <th scope="row">{{ dish.id }}</th>
+          <td>{{ dish.name }}</td>
+          <td>{{ dish.description }}</td>
+          <td>{{ dish.price }}$</td>
+          <td>{{ dish.dish_type }}</td>
           <td><a href="" class="btn update_button bg-gradient rounded-pill">Update</a> implement letter</td>
           <td><a href="" class="btn delete_button bg-gradient rounded-pill">Delete</a> implement letter</td>
       </tbody>
@@ -25,6 +31,6 @@
   {% else %}
     <p>We don't have any dish types now :(</p>
   {% endif %}
-  <h2>You can create your dish type - <a href="" class="btn create_button bg-gradient rounded-pill">Create</a> implement letter</h2>
+  <h2>You can create your dish - <a href="" class="btn create_button bg-gradient rounded-pill">Create</a> implement letter</h2>
 
 {% endblock %}

@@ -1,0 +1,69 @@
+body{
+    background-image: url("../images/food.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 24px;
+}
+
+.main_content {
+    height: 100vh;
+    border-radius: 10px;
+    margin-left: 250px;
+    margin-right: 250px;
+    background-image: url('../images/background.jpg');
+}
+
+.bg-header {
+    background-image: url('../images/background.jpg');
+}
+
+.custom_button {
+    background-color: lightgray;
+    height: 50px;
+    width: 150px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border: black solid 2px;
+    font-size: 20px;
+}
+
+
+.update_button {
+    background-color: #E9E9CF;
+    height: 35px;
+    width: 100px;
+    border: black solid 2px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+}
+
+.delete_button {
+    background-color: #E9CFD4;
+    height: 35px;
+    width: 100px;
+    border: black solid 2px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+}
+
+
+.create_button {
+    background-color: #CFE9D7;
+    height: 35px;
+    width: 100px;
+    border: black solid 2px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+}
+
+.active_pagination {
+    background-color: lightgray;
+    color: black;
+}
+
+.pagination_link {
+    color: black;
+}

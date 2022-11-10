@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Our cooks:</h1>
+  <h2>You can create new cook - <a href="" class="btn create_button bg-gradient rounded-pill">Create</a> implement letter</h2>
+  {% if cook_list %}
+      <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">username</th>
+          <th scope="col">years_of_experience</th>
+          <th scope="col">first_name</th>
+          <th scope="col">last_name</th>
+        </tr>
+      </thead>
+        {% for cook in cook_list %}
+      <tbody>
+        <tr>
+          <th scope="row">{{ cook.id }}</th>
+          <td>{{ cook.username }}</td>
+          <td>{{ cook.years_of_experience }}</td>
+          <td>{{ cook.first_name }}</td>
+          <td>{{ cook.last_name }}</td>
+      </tbody>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>We don't have any cooks now :(</p>
+  {% endif %}
+
+{% endblock %}

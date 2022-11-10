@@ -4,7 +4,7 @@
     <a href="{% url 'kitchen:index' %}" class="btn custom_button bg-gradient bg-opacity-25 rounded-pill float-start home_button">Home</a>
     <a href="{% url 'kitchen:dishes-list' %}" class="btn custom_button bg-gradient bg-opacity-50 rounded-pill">All dishes</a>
     <a href="{% url 'kitchen:dish-type-list' %}" class="btn custom_button bg-gradient bg-opacity-25 rounded-pill">All dish types</a>
-    <a href="#" class="btn custom_button bg-gradient bg-opacity-25 rounded-pill">All cooks</a>
+    <a href="{% url 'kitchen:cooks-list' %}" class="btn custom_button bg-gradient bg-opacity-25 rounded-pill">All cooks</a>
     {% if user.is_authenticated %}
       <div style="float: right" class="">
         <h4 class="d-inline">username</h4>

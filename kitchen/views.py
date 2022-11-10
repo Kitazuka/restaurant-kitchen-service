@@ -1,5 +1,7 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
+from django.views import generic
 
 from kitchen.models import Dish, DishType
 
@@ -19,3 +21,10 @@ def index(request):
     }
 
     return render(request, "kitchen/index.html", context)
+
+
+class DishTypeListView(LoginRequiredMixin, generic.ListView):
+    template_name = "kitchen/dish_types_list.html"
+    model = DishType
+    paginate_by = 5
+    context_object_name = "dish_type_list"

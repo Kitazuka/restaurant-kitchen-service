@@ -17,7 +17,7 @@ body{
     background-image: url('../images/background.jpg');
 }
 
-.header_button {
+.custom_button {
     background-color: lightslategray;
     height: 50px;
     width: 150px;
@@ -25,4 +25,36 @@ body{
     margin-right: 5px;
     border: black solid 2px;
     font-size: 20px;
+}
+
+
+.update_button {
+    background-color: #D3BC69;
+    height: 35px;
+    width: 100px;
+    border: black solid 2px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+}
+
+.delete_button {
+    background-color: #E5255E;
+    height: 35px;
+    width: 100px;
+    border: black solid 2px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+}
+
+
+.create_button {
+    background-color: #3C9B54;
+    height: 35px;
+    width: 100px;
+    border: black solid 2px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
 }

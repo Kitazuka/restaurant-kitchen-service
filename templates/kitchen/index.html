@@ -1,35 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="m-5">
-    <h1 class="text-center">Welcome, here you can look at our type of dishes, cooks or dishes!</h1>
-    <br>
-    <p class="">
-      In our kitchen there are many chefs with many years of experience,
-      each of them is a professional in his field.
-      Also in our menu there are many dishes for every taste and type.
-    </p>
+  <h1 class="text-center">Welcome, here you can look at our type of dishes, cooks or dishes!</h1>
+  <br>
+  <p class="">
+    In our kitchen there are many chefs with many years of experience,
+    each of them is a professional in his field.
+    Also in our menu there are many dishes for every taste and type.
+  </p>
 
-        <p class="h2">
-          We have:
-        </p>
-        <ul>
-          <li class="">{{ num_dish_types }} dish types</li>
-          <li class="">{{ num_dishes }} dishes</li>
-          <li class="">{{ num_cooks }} professional cooks</li>
-        </ul>
-        <br>
-        <p class="h4 text-center">
-          <strong>
-            You visit this page {{ num_visits }} time{% if num_visits > 1 %}s{% endif %}
-          </strong>
+  <p class="h2">
+    We have:
+  </p>
+  <ul>
+    <li class="">{{ num_dish_types }} dish types</li>
+    <li class="">{{ num_dishes }} dishes</li>
+    <li class="">{{ num_cooks }} professional cooks</li>
+  </ul>
+  <br>
+  <p class="h4 text-center">
+    <strong>
+      You visit this page {{ num_visits }} time{% if num_visits > 1 %}s{% endif %}
+    </strong>
 
-        </p>
-
-
-  </div>
-
-
-
-
+  </p>
 {% endblock %}

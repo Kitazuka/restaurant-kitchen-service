@@ -58,3 +58,12 @@ body{
     text-align: center;
     padding: 0;
 }
+
+.active_pagination {
+    background-color: lightgray;
+    color: black;
+}
+
+.pagination_link {
+    color: black;
+}

@@ -2,6 +2,7 @@
 
 {% block content %}
   <h1>Our dishes:</h1>
+  <h2>You can create new dish - <a href="" class="btn create_button bg-gradient rounded-pill">Create</a> implement letter</h2>
   {% if dish_list %}
       <table class="table">
       <thead>
@@ -31,6 +32,5 @@
   {% else %}
     <p>We don't have any dish now :(</p>
   {% endif %}
-  <h2>You can create your dish - <a href="" class="btn create_button bg-gradient rounded-pill">Create</a> implement letter</h2>
 
 {% endblock %}

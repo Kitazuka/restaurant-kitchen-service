@@ -1,0 +1,25 @@
+body{
+    background-image: url("../images/food.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_content {
+    height: 100vh;
+    border-radius: 10px;
+    margin-left: 250px;
+    margin-right: 250px;
+    background-image: url('../images/background.jpg');
+}
+
+.bg-header {
+    background-image: url('../images/background.jpg');
+}
+
+.header_button {
+    background-color: gray;
+    height: 50px;
+    width: 150px;
+    margin-top: 10px;
+    border: black solid 2px;
+}

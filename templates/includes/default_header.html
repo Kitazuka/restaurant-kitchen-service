@@ -1,0 +1,21 @@
+<div class="container bg-header bg-opacity-25 rounded-pill">
+<div class="row py-7 mt-2 text-md-center">
+  <div class="navbar-brand font-weight-bolder">
+    <a href="#" class="btn header_button bg-gradient bg-opacity-25 rounded-pill">All dishes</a>
+    <a href="#" class="btn header_button bg-gradient bg-opacity-25 rounded-pill">All dish type</a>
+    <a href="#" class="btn header_button bg-gradient bg-opacity-25 rounded-pill">All cooks</a>
+    {% if user.is_authenticated %}
+      <div style="float: right" class="">
+        <h4 class="d-inline">username</h4>
+        <a href="" class="btn header_button bg-gradient bg-warning rounded-pill">Logout</a>
+      </div>
+
+    {% else %}
+      <a href="" class="btn header_button bg-gradient bg-success rounded-pill">Log in</a>
+    {% endif %} 
+
+  </div>
+</div>
+</div>
+
+

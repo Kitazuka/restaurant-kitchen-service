@@ -33,6 +33,7 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
 class DishListView(LoginRequiredMixin, generic.ListView):
     model = Dish
     paginate_by = 5
+    queryset = Dish.objects.all().select_related("dish_type")
 
 
 class DishDetailView(LoginRequiredMixin, generic.DetailView):
@@ -42,3 +43,9 @@ class DishDetailView(LoginRequiredMixin, generic.DetailView):
 class CookListView(LoginRequiredMixin, generic.ListView):
     model = Cook
     paginate_by = 5
+
+
+class CookDetailView(LoginRequiredMixin, generic.DetailView):
+    model = Cook
+    # queryset = get_user_model().objects.prefetch_related("dishes__dish_type")
+

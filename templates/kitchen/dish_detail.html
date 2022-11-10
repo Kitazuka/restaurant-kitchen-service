@@ -45,7 +45,7 @@
     {% for cook in dish.cooks.all %}
     <tbody>
       <tr>
-        <th scope="col">{{ cook.id }}</th>
+        <th scope="row"><a href="{% url 'kitchen:cooks-detail' pk=cook.id %}">{{ cook.id }}</a></th>
         <td>{{ cook.username }}</td>
         <td>{{ cook.years_of_experience }}</td>
         <td>{{ cook.description }}</td>

@@ -44,6 +44,18 @@ class DishDetailView(LoginRequiredMixin, generic.DetailView):
     model = Dish
 
 
+class DishCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Dish
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dishes-list")
+
+
+class DishUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Dish
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dishes-list")
+
+
 class CookListView(LoginRequiredMixin, generic.ListView):
     model = Cook
     paginate_by = 5

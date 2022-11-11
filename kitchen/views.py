@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.views import generic
@@ -6,6 +7,7 @@ from django.views import generic
 from kitchen.models import Dish, DishType, Cook
 
 
+@login_required
 def index(request):
     num_dishes = Dish.objects.count()
     num_cooks = get_user_model().objects.count()

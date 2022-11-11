@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Login</h1>
-  {% if forms.errors %}
-    <p>{{ errors }}</p>
-  {% endif %} 
-  <form action="{% url 'login' %}" method="post">
+  <h1 class="text-center">Login</h1>
+  <div class="dropdown-menu">
+
+  </div>
+  <form action="{% url 'login' %}" method="post" class="text-center">
     {% csrf_token %}
-    {{ form.as_p }}
-    <br>
-    <input type="submit" value="Login">
+    {{form.as_p}}
+     <input type="submit" value="Login" class="p-2 bd-highlight rounded-4">
   </form>
   
 {% endblock %}
+

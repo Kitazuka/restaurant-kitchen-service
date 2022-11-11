@@ -19,7 +19,7 @@
           <th scope="row">{{ dish_type.id }}</th>
           <td>{{ dish_type.name }}</td>
           <td><a href="{% url 'kitchen:dish-type-update' pk=dish_type.id %}" class="btn update_button bg-gradient rounded-pill">Update</a></td>
-          <td><a href="" class="btn delete_button bg-gradient rounded-pill">Delete</a> implement letter</td>
+          <td><a href="{% url 'kitchen:dish-type-delete' pk=dish_type.id %}" class="btn delete_button bg-gradient rounded-pill">Delete</a></td>
       </tbody>
       {% endfor %}
     </table>

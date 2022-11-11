@@ -3,8 +3,8 @@
 {% block content %}
   <h1>{{ dish.name }}
     <div class="float-end">
-      <a href="" class="btn update_button bg-gradient rounded-pill">Update</a>
-      <a href="" class="btn delete_button bg-gradient rounded-pill">Delete</a>
+      <a href="{% url 'kitchen:dishes-update' pk=dish.id %}" class="btn update_button bg-gradient rounded-pill">Update</a>
+      <a href="{% url 'kitchen:dishes-delete' pk=dish.id %}" class="btn delete_button bg-gradient rounded-pill">Delete</a>
     </div>
   </h1>
 

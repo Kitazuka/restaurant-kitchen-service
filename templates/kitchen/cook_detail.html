@@ -3,8 +3,9 @@
 {% block content %}
   <h1>{{ cook.username }}
     <div class="float-end">
-      <a href="" class="btn update_button bg-gradient rounded-pill">Update</a>
-      <a href="" class="btn delete_button bg-gradient rounded-pill">Delete</a>
+      {% if cook.id == user.id %}
+        <a href="{% url 'kitchen:cooks-delete' pk=cook.id %}" class="btn delete_button bg-gradient rounded-pill">Delete</a>
+      {% endif %}
     </div>
   </h1>
 

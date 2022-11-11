@@ -4,13 +4,13 @@
 
 {% block content %}
 
-  <h1 class="text-center">Login</h1>
+  <h1 class="text-center pb-5">Login</h1>
       {% if form.errors %}
-        <p style="color: #FF4343" class="text-center">Incorrect username or password</p>
+        <p style="color: #FF4343" class="text-center">Your username and password didn't match. Please try again.</p>
       {% endif %}
   <div class="container d-flex justify-content-center">
 
-    <form action="{% url 'login' %}" method="post" class="login bg-login p-5 rounded-3 w-25">
+    <form action="{% url 'login' %}" method="post" class="login bg-login p-5 rounded-3">
       {% csrf_token %}
         <span>{{form.username|as_crispy_field}}</span>
         <span>{{form.password|as_crispy_field}}</span>

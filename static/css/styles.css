@@ -1,17 +1,25 @@
+html {
+    font-size: 16px;
+}
+
 body{
     background-image: url("../images/food.jpg");
     backdrop-filter: blur(5px);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    font-size: 24px;
+    height: 100%;
+
 }
 
 .main_content {
-    height: 100vh;
+    height:100vh;
     border-radius: 10px;
+    bottom: 0;
     margin-left: 250px;
     margin-right: 250px;
     background-image: url('../images/background.jpg');
+    -webkit-background-size: cover;
 }
 
 .bg-header {
@@ -72,4 +80,5 @@ body{
 .bg-login {
     background-color: #EEEEEE;
     border: black solid 2px;
+    width: 30%;
 }

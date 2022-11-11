@@ -40,6 +40,20 @@ class DishListView(LoginRequiredMixin, generic.ListView):
     queryset = Dish.objects.all().select_related("dish_type")
 
 
+class DishTypeCreateView(LoginRequiredMixin, generic.CreateView):
+    model = DishType
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dish-type-list")
+    template_name = "kitchen/dish_types_form.html"
+
+
+class DishTypeUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = DishType
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dish-type-list")
+    template_name = "kitchen/dish_types_form.html"
+
+
 class DishDetailView(LoginRequiredMixin, generic.DetailView):
     model = Dish
 

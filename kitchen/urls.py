@@ -5,13 +5,33 @@ from kitchen.views import (
     DishTypeListView,
     DishListView,
     CookListView,
+    DishDetailView,
+    CookDetailView,
+    CookCreateView,
+    CookDeleteView,
+    DishCreateView,
+    DishUpdateView,
+    DishDeleteView,
+    DishTypeCreateView,
+    DishTypeUpdateView,
+    DishTypeDeleteView,
 )
 
 urlpatterns = [
     path("", index, name="index"),
-    path("dish-types/list/", DishTypeListView.as_view(), name="dish-type-list"),
-    path("dishes/list/", DishListView.as_view(), name="dishes-list"),
-    path("cooks/list/", CookListView.as_view(), name="cooks-list")
+    path("dish-types/", DishTypeListView.as_view(), name="dish-type-list"),
+    path("dish-types/create/", DishTypeCreateView.as_view(), name="dish-type-create"),
+    path("dish-types/<int:pk>/update/", DishTypeUpdateView.as_view(), name="dish-type-update"),
+    path("dish-types/<int:pk>/delete/", DishTypeDeleteView.as_view(), name="dish-type-delete"),
+    path("dishes/", DishListView.as_view(), name="dishes-list"),
+    path("dishes/<int:pk>/", DishDetailView.as_view(), name="dishes-detail"),
+    path("dishes/create/", DishCreateView.as_view(), name="dishes-create"),
+    path("dishes/<int:pk>/update/", DishUpdateView.as_view(), name="dishes-update"),
+    path("dishes/<int:pk>/delete/", DishDeleteView.as_view(), name="dishes-delete"),
+    path("cooks/", CookListView.as_view(), name="cooks-list"),
+    path("cooks/<int:pk>/", CookDetailView.as_view(), name="cooks-detail"),
+    path("cooks/create/", CookCreateView.as_view(), name="cooks-create"),
+    path("cooks/<int:pk>/delete/", CookDeleteView.as_view(), name="cooks-delete"),
 ]
 
 app_name = "kitchen"

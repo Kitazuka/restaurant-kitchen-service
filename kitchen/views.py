@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from kitchen.forms import CookForm
+from kitchen.forms import CookForm, DishForm
 from kitchen.models import Dish, DishType, Cook
 
 
@@ -66,14 +66,14 @@ class DishDetailView(LoginRequiredMixin, generic.DetailView):
 
 
 class DishCreateView(LoginRequiredMixin, generic.CreateView):
+    form_class = DishForm
     model = Dish
-    fields = "__all__"
     success_url = reverse_lazy("kitchen:dishes-list")
 
 
 class DishUpdateView(LoginRequiredMixin, generic.UpdateView):
+    form_class = DishForm
     model = Dish
-    fields = "__all__"
     success_url = reverse_lazy("kitchen:dishes-list")
 
 

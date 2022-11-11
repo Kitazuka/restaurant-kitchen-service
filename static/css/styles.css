@@ -88,3 +88,9 @@ body{
     border: black solid 2px;
     width: 30%;
 }
+
+.custom_button_delete_confirm {
+    height: 40px;
+    width: 125px;
+    text-align: center;
+}

@@ -6,8 +6,14 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from kitchen.forms import CookForm, DishForm, DishSearchForm, CookSearchForm, DishTypeSearchForm
 from kitchen.models import Dish, DishType, Cook
+from kitchen.forms import (
+    CookForm,
+    DishForm,
+    DishSearchForm,
+    CookSearchForm,
+    DishTypeSearchForm
+)
 
 
 @login_required
@@ -164,4 +170,7 @@ def toggle_assign_to_dish(request, pk):
         dish.cooks.remove(user)
     else:
         dish.cooks.add(user)
-    return HttpResponseRedirect(reverse_lazy("kitchen:dishes-detail", args=[pk]))
+    return HttpResponseRedirect(reverse_lazy(
+        "kitchen:dishes-detail",
+        args=[pk])
+    )

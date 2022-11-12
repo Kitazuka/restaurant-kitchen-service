@@ -2,7 +2,7 @@
 Django project for managing kitchen
 
 # Check it out!
-[Link on render](PASTE_LINK)
+[Link on render](https://restaurant-kitchen-service-q07y.onrender.com)
 
 # Installation
 

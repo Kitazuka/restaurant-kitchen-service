@@ -48,7 +48,6 @@
         <th scope="row"><a href="{% url 'kitchen:cooks-detail' pk=cook.id %}">{{ cook.id }}</a></th>
         <td>{{ cook.username }}</td>
         <td>{{ cook.years_of_experience }}</td>
-        <td>{{ cook.description }}</td>
         <td>{{ cook.first_name }}</td>
         <td>{{ cook.last_name }}</td>
     </tbody>
@@ -57,6 +56,14 @@
 
   {% else %}
     <p>It's very difficult, no one knows how to do it :(</p>
+  {% endif %}
+
+    <hr>
+  {% if user in dish.cooks.all %}
+    <a href="{% url 'kitchen:toggle-dish-assign' pk=dish.id %}" class="btn btn-danger">Delete me from this dish</a>
+
+  {% else %}
+    <a href="{% url 'kitchen:toggle-dish-assign' pk=dish.id %}" class="btn btn-success">Assign me to this dish</a>
   {% endif %}
 
 

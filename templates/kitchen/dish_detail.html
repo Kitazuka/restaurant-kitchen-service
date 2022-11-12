@@ -60,10 +60,10 @@
 
     <hr>
   {% if user in dish.cooks.all %}
-    <a href="{% url 'kitchen:toggle-dish-assign' pk=dish.id %}" class="btn btn-danger">Delete me from this dish</a>
+    <a href="{% url 'kitchen:toggle-dish-assign' pk=dish.id %}" class="btn btn-danger rounded-pill">Delete me from this dish</a>
 
   {% else %}
-    <a href="{% url 'kitchen:toggle-dish-assign' pk=dish.id %}" class="btn btn-success">Assign me to this dish</a>
+    <a href="{% url 'kitchen:toggle-dish-assign' pk=dish.id %}" class="btn btn-success rounded-pill">Assign me to this dish</a>
   {% endif %}
 
 

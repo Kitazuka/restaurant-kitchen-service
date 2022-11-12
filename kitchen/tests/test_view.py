@@ -116,7 +116,7 @@ class DishListTest(TestCase):
                 dish_type=dish_type,
             )
 
-        response = self.client.get(DISH_LIST_URL + f"?name=1")
+        response = self.client.get(DISH_LIST_URL + "?name=1")
         # dishes №1, 10, 11
         self.assertEqual(response.context["dish_list"].count(), 3)
 
@@ -136,7 +136,7 @@ class DishTypeListTest(TestCase):
                 name=f"test dish_type №{dish_type_index}",
             )
 
-        response = self.client.get(DISH_TYPE_LIST_URL + f"?name=1")
+        response = self.client.get(DISH_TYPE_LIST_URL + "?name=1")
         # dish_types №1, 10, 11
         self.assertEqual(response.context["dish_type_list"].count(), 3)
 
@@ -158,6 +158,6 @@ class CookListTest(TestCase):
                 password="test_password",
             )
 
-        response = self.client.get(COOK_LIST_URL + f"?username=1")
+        response = self.client.get(COOK_LIST_URL + "?username=1")
         # cooks №1, 10, 11
         self.assertEqual(response.context["cook_list"].count(), 3)

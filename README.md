@@ -4,6 +4,10 @@ Django project for managing kitchen
 # Check it out!
 [Link on render](https://restaurant-kitchen-service-q07y.onrender.com)
 
+Your user:
+- G_Ramsay - Login
+- acKhxCrt - Password
+
 # Installation
 
 Python3 must be already installed
